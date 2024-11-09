@@ -5,21 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokémon Characters</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" rel="stylesheet"/>
 </head>
-<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
-    <h1 class="text-3xl md:text-5xl font-bold text-yellow-500 mb-6">Pokémon</h1>
 
-    <div class="flex justify-center gap-3 w-full max-w-md mb-6">
-        <button id="prev-button" disabled class="bg-purple-500 text-white w-32 h-12 rounded-lg hover:bg-purple-600 disabled:opacity-50">Previous</button>
-        <button id="next-button" class="bg-purple-500 text-white w-32 h-12 rounded-lg hover:bg-purple-600">Next</button>
-    </div>
-    
-    <div class="flex justify-center items-center mb-6">
-        <img src="" alt="Pokemon Sprite Front" id="pokemonSprite1" class="w-32 h-32 object-cover mr-4" style="display: none;">
-        <img src="" alt="Pokemon Sprite Back" id="pokemonSprite2" class="w-32 h-32 object-cover" style="display: none;">
-    </div>
+<body class="bg-purple-100 flex flex-col items-center justify-center min-h-screen resize">
+    <style></style>
+    <div class="bg-yellow-50 p-6 rounded-lg shadow-lg">
+        <div class="flex resize bg-purple-100 justify-center items-center gap-3 w-full max-w-md mb-6 px-4 py-2 text-center">
+            <button id="prev-button" class="fa-solid fa-less-than bg-purple-500 text-white w-12 h-12 rounded-lg hover:bg-purple-600 disabled:opacity-50"></button>
+            <h1 class="text-2xl md:text-4xl font-semibold text-yellow-500 p-2">Pokémon</h1>
+            <button id="next-button" class="fa-solid fa-greater-than bg-purple-500 text-white w-12 h-12 rounded-lg hover:bg-purple-600"></button>
+        </div>
+        
+        <div class="flex justify-center items-center mb-6">
+            <img src="" alt="Pokemon Sprite Front" id="pokemonSprite1" class="w-32 h-32 object-cover" style="display: none;">
+            <img src="" alt="Pokemon Sprite Back" id="pokemonSprite2" class="w-32 h-32 object-cover" style="display: none;">
+        </div>
 
-    <h2 id="pokemonNameDisplay" class="text-xl font-semibold text-gray-800"></h2>
+        <h2 id="pokemonNameDisplay" class="text-center text-xl font-bold text-purple-500 p-3"></h2>
+    </div>
 
     <script src="script.js"></script>
 </body>
